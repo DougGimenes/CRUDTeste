@@ -1,25 +1,31 @@
 inherited FraPedido: TFraPedido
   inherited PnlBotoes: TPanel
     inherited BtnNovo: TButton
+      TabStop = False
       OnClick = BtnNovoClick
     end
     inherited BtnAlterar: TButton
       Enabled = False
+      TabStop = False
       OnClick = BtnAlterarClick
     end
     inherited BtnConsultar: TButton
+      TabStop = False
       OnClick = BtnConsultarClick
     end
     inherited BtnExcluir: TButton
       Enabled = False
+      TabStop = False
       OnClick = BtnExcluirClick
     end
     inherited BtnCancelar: TButton
       Enabled = False
+      TabStop = False
       OnClick = BtnCancelarClick
     end
     inherited BtnGravar: TButton
       Enabled = False
+      TabStop = False
       OnClick = BtnGravarClick
     end
   end
@@ -55,30 +61,33 @@ inherited FraPedido: TFraPedido
       EditLabel.Width = 93
       EditLabel.Height = 22
       EditLabel.Caption = 'Refer'#234'ncia'
-      TabOrder = 0
+      TabOrder = 1
+      OnKeyDown = ProximoCampo
     end
     object LedNumPedido: TLabeledEdit
       Left = 30
       Top = 33
       Width = 130
       Height = 30
+      TabStop = False
       EditLabel.Width = 137
       EditLabel.Height = 22
       EditLabel.Caption = 'Num. do Pedido'
       NumbersOnly = True
       ReadOnly = True
-      TabOrder = 1
+      TabOrder = 0
     end
     object LedNomeCliente: TLabeledEdit
       Left = 30
       Top = 97
       Width = 280
       Height = 30
+      TabStop = False
       EditLabel.Width = 59
       EditLabel.Height = 22
       EditLabel.Caption = 'Cliente'
       ReadOnly = True
-      TabOrder = 2
+      TabOrder = 4
     end
     object CmbOperacao: TComboBox
       Left = 495
@@ -87,6 +96,7 @@ inherited FraPedido: TFraPedido
       Height = 30
       Style = csDropDownList
       TabOrder = 3
+      OnKeyDown = ProximoCampo
       Items.Strings = (
         'Entrada'
         'Saida')
@@ -99,7 +109,8 @@ inherited FraPedido: TFraPedido
       Date = 44119.000000000000000000
       Time = 0.842564444443269200
       Enabled = False
-      TabOrder = 4
+      TabOrder = 2
+      TabStop = False
     end
     object BtnConsultarCliente: TButton
       Left = 316
@@ -119,28 +130,30 @@ inherited FraPedido: TFraPedido
       BevelOuter = bvNone
       Caption = 'PnlItens'
       ShowCaption = False
-      TabOrder = 6
+      TabOrder = 7
       object LedPrecoUnitario: TLabeledEdit
         Left = 263
         Top = 84
         Width = 116
         Height = 30
+        TabStop = False
         EditLabel.Width = 119
         EditLabel.Height = 22
         EditLabel.Caption = 'Pre'#231'o Unit'#225'rio'
         ReadOnly = True
-        TabOrder = 0
+        TabOrder = 1
       end
       object LedProduto: TLabeledEdit
         Left = 30
         Top = 84
         Width = 227
         Height = 30
+        TabStop = False
         EditLabel.Width = 67
         EditLabel.Height = 22
         EditLabel.Caption = 'Produto'
         ReadOnly = True
-        TabOrder = 1
+        TabOrder = 0
       end
       object DbgItens: TDBGrid
         Left = 30
@@ -149,7 +162,7 @@ inherited FraPedido: TFraPedido
         Height = 165
         DataSource = DsItens
         Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-        TabOrder = 2
+        TabOrder = 4
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -19
@@ -196,7 +209,7 @@ inherited FraPedido: TFraPedido
         BevelOuter = bvNone
         Caption = 'PnlBotoes'
         ShowCaption = False
-        TabOrder = 3
+        TabOrder = 5
         object BtnNovoItem: TButton
           Left = 10
           Top = 10
@@ -205,6 +218,7 @@ inherited FraPedido: TFraPedido
           Caption = 'Novo'
           Enabled = False
           TabOrder = 0
+          TabStop = False
           OnClick = BtnNovoItemClick
         end
         object BtnAlterarItem: TButton
@@ -215,6 +229,7 @@ inherited FraPedido: TFraPedido
           Caption = 'Alterar'
           Enabled = False
           TabOrder = 1
+          TabStop = False
           OnClick = BtnAlterarItemClick
         end
         object BtnConsultarProduto: TButton
@@ -222,9 +237,10 @@ inherited FraPedido: TFraPedido
           Top = 10
           Width = 100
           Height = 30
-          Caption = 'Consultar'
+          Caption = 'Cliente'
           Enabled = False
           TabOrder = 2
+          TabStop = False
           OnClick = BtnConsultarProdutoClick
         end
         object BtnExcluirItem: TButton
@@ -235,6 +251,7 @@ inherited FraPedido: TFraPedido
           Caption = 'Excluir'
           Enabled = False
           TabOrder = 3
+          TabStop = False
           OnClick = BtnExcluirItemClick
         end
         object BtnCancelarItem: TButton
@@ -245,6 +262,7 @@ inherited FraPedido: TFraPedido
           Caption = 'Cancelar'
           Enabled = False
           TabOrder = 4
+          TabStop = False
           OnClick = BtnCancelarItemClick
         end
         object BtnGravarItem: TButton
@@ -255,6 +273,7 @@ inherited FraPedido: TFraPedido
           Caption = 'Gravar'
           Enabled = False
           TabOrder = 5
+          TabStop = False
           OnClick = BtnGravarItemClick
         end
       end
@@ -266,7 +285,8 @@ inherited FraPedido: TFraPedido
         EditLabel.Width = 97
         EditLabel.Height = 22
         EditLabel.Caption = 'Quantidade'
-        TabOrder = 4
+        TabOrder = 2
+        OnKeyDown = ProximoCampo
         OnKeyPress = LedQuantidadeKeyPress
       end
       object LedValorTotal: TLabeledEdit
@@ -274,23 +294,26 @@ inherited FraPedido: TFraPedido
         Top = 84
         Width = 133
         Height = 30
+        TabStop = False
         EditLabel.Width = 96
         EditLabel.Height = 22
         EditLabel.Caption = 'Pre'#231'o Final'
         ReadOnly = True
-        TabOrder = 5
+        TabOrder = 3
       end
     end
     object LedTotalPedido: TLabeledEdit
-      Left = 495
+      Left = 487
       Top = 97
       Width = 145
       Height = 30
+      TabStop = False
+      Alignment = taCenter
       EditLabel.Width = 133
       EditLabel.Height = 22
       EditLabel.Caption = 'Total do Pedido'
       ReadOnly = True
-      TabOrder = 7
+      TabOrder = 6
     end
   end
   object MtbItens: TFDMemTable

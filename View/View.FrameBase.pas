@@ -24,6 +24,7 @@ type
     BtnExcluir: TButton;
     BtnCancelar: TButton;
     BtnGravar: TButton;
+    procedure ProximoCampo(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -35,5 +36,13 @@ implementation
 {$R *.dfm}
 
 { TFraBase }
+
+procedure TFraBase.ProximoCampo(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if Key = VK_Return then
+  begin
+    perform(wm_nextdlgctl, 0, 0);
+  end;
+end;
 
 end.

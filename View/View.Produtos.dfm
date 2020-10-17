@@ -42,6 +42,7 @@ inherited FraProdutos: TFraProdutos
       EditLabel.Height = 22
       EditLabel.Caption = 'Descri'#231#227'o'
       TabOrder = 0
+      OnKeyDown = ProximoCampo
     end
     object LedPrecoVenda: TLabeledEdit
       Left = 5
@@ -52,6 +53,7 @@ inherited FraProdutos: TFraProdutos
       EditLabel.Height = 22
       EditLabel.Caption = 'Pre'#231'o de Venda'
       TabOrder = 1
+      OnKeyDown = ProximoCampo
       OnKeyPress = LedPrecoVendaKeyPress
     end
   end

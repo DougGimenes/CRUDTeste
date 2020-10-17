@@ -40,6 +40,7 @@ object FrmConexao: TFrmConexao
     EditLabel.Height = 22
     EditLabel.Caption = 'Servidor SQL Server'
     TabOrder = 0
+    OnKeyDown = ProximoCampo
   end
   object LedBanco: TLabeledEdit
     Left = 50
@@ -50,6 +51,7 @@ object FrmConexao: TFrmConexao
     EditLabel.Height = 22
     EditLabel.Caption = 'Banco de Dados'
     TabOrder = 1
+    OnKeyDown = ProximoCampo
   end
   object LedLogin: TLabeledEdit
     Left = 50
@@ -60,6 +62,7 @@ object FrmConexao: TFrmConexao
     EditLabel.Height = 22
     EditLabel.Caption = 'Login de Usu'#225'rio'
     TabOrder = 2
+    OnKeyDown = ProximoCampo
   end
   object LedSenha: TLabeledEdit
     Left = 50
@@ -71,6 +74,7 @@ object FrmConexao: TFrmConexao
     EditLabel.Caption = 'Senha'
     PasswordChar = '*'
     TabOrder = 3
+    OnKeyDown = ProximoCampo
   end
   object BtnGravar: TButton
     Left = 50

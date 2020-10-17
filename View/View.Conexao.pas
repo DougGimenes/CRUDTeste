@@ -26,6 +26,7 @@ type
     BtnGravar: TButton;
     procedure BtnGravarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ProximoCampo(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     FConexaoGerada: String;
     FGravou: Boolean;
@@ -58,6 +59,14 @@ procedure TFrmConexao.FormCreate(Sender: TObject);
 begin
   Self.FGravou := False;
   Self.FConexaoGerada := '';
+end;
+
+procedure TFrmConexao.ProximoCampo(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if Key = VK_Return then
+  begin
+    perform(wm_nextdlgctl, 0, 0);
+  end;
 end;
 
 end.

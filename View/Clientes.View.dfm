@@ -41,7 +41,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 25
       EditLabel.Height = 22
       EditLabel.Caption = 'UF'
-      TabOrder = 0
+      TabOrder = 7
+      OnKeyDown = ProximoCampo
     end
     object LedCidade: TLabeledEdit
       Left = 2
@@ -51,7 +52,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 61
       EditLabel.Height = 22
       EditLabel.Caption = 'Cidade'
-      TabOrder = 1
+      TabOrder = 5
+      OnKeyDown = ProximoCampo
     end
     object LedNome: TLabeledEdit
       Left = 2
@@ -61,7 +63,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 51
       EditLabel.Height = 22
       EditLabel.Caption = 'Nome'
-      TabOrder = 2
+      TabOrder = 0
+      OnKeyDown = ProximoCampo
     end
     object LedCEP: TLabeledEdit
       Left = 2
@@ -72,7 +75,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Height = 22
       EditLabel.Caption = 'CEP'
       NumbersOnly = True
-      TabOrder = 3
+      TabOrder = 1
+      OnKeyDown = ProximoCampo
     end
     object LedLogradouro: TLabeledEdit
       Left = 1
@@ -82,7 +86,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 98
       EditLabel.Height = 22
       EditLabel.Caption = 'Logradouro'
-      TabOrder = 4
+      TabOrder = 3
+      OnKeyDown = ProximoCampo
     end
     object LedComplemento: TLabeledEdit
       Left = 2
@@ -92,7 +97,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 120
       EditLabel.Height = 22
       EditLabel.Caption = 'Complemento'
-      TabOrder = 5
+      TabOrder = 4
+      OnKeyDown = ProximoCampo
     end
     object LedBairro: TLabeledEdit
       Left = 2
@@ -103,6 +109,7 @@ inherited FraClientes: TFraClientes
       EditLabel.Height = 22
       EditLabel.Caption = 'Bairro'
       TabOrder = 6
+      OnKeyDown = ProximoCampo
     end
     object LedCodIBGE: TLabeledEdit
       Left = 202
@@ -112,7 +119,8 @@ inherited FraClientes: TFraClientes
       EditLabel.Width = 141
       EditLabel.Height = 22
       EditLabel.Caption = 'C'#243'digo do IBGE'
-      TabOrder = 7
+      TabOrder = 8
+      OnKeyDown = ProximoCampo
     end
     object BtnCEP: TButton
       Left = 192
@@ -120,8 +128,9 @@ inherited FraClientes: TFraClientes
       Width = 160
       Height = 30
       Caption = 'Consultar CEP'
-      TabOrder = 8
+      TabOrder = 2
       OnClick = BtnCEPClick
+      OnKeyDown = ProximoCampo
     end
   end
 end
