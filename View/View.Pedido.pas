@@ -378,7 +378,7 @@ begin
   end;
 
   Self.CmbOperacao.ItemIndex := Ord(Self.PedidoAtual.Operacao);
-  Self.LedTotalPedido.Text   := Self.PedidoAtual.TotalPedido.ToString();
+  Self.LedTotalPedido.Text   := FormatFloat('#,##0.00', Self.PedidoAtual.TotalPedido);
   
   Self.Cliente := TCliente.Create(Self.PedidoAtual.CodCliente);
   Self.LedNomeCliente.Text := Self.Cliente.Nome;
